@@ -8,5 +8,11 @@ def to_hex(r, g, b)
 end
 
 def to_ints(hex)
-  [0, 0, 0]
+  #引数の文字列から3つの１６進数を引き出す（文字列から１６真数の文字列を2文字ずつ取り出す）
+  r = hex[1..2]
+  g = hex[3..4]
+  b = hex[5..6]
+  [r, g, b].map do |s| 
+    s.hex
+  end
 end
